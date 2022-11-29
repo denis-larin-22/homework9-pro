@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 9</title>
+</head>
+
+<body>
+    <script>
+
+        function cloneObj(obj) {
+            const newObj = {};
+
+            for (let prop in obj) {
+                newObj[prop] = obj[prop];
+            }
+
+            return newObj;
+        }
+
+
+        function getValues(obj) {
+            let array = [];
+
+            for (key in obj) {
+                array.push(obj[key]);
+            }
+
+            return array;
+        }
+
+
+        function getKeys(obj) {
+            let array = [];
+
+            for (key in obj) {
+                array.push(key);
+            }
+
+            return array;
+        }
+
+
+        function getEntries(obj) {
+            let array = [];
+
+            for (key in obj) {
+                let nestedArray = [];
+
+                for (let i = 0; i < 2; i++) {
+                    i == 0 ? nestedArray[i] = key : nestedArray[i] = obj[key];
+                }
+
+                array.push(nestedArray);
+            }
+
+            return array;
+        }
+
+    </script>
+</body>
+
+</html>
